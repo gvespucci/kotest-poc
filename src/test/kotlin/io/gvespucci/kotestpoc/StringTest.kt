@@ -4,10 +4,13 @@ import io.kotest.core.spec.style.ShouldSpec
 import io.kotest.matchers.shouldNot
 import io.kotest.matchers.string.beEmpty
 
-class ProofOfConceptTest : ShouldSpec({
+class StringTest : ShouldSpec({
 
-    should("an empty string be empty") {
+    should("a non-empty string be not empty") {
         "Kotest" shouldNot beEmpty()
+    }
+    should("an empty string be empty") {
+        "" should beEmpty()
     }
 
 })
